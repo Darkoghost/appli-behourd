@@ -2,7 +2,7 @@
   "name": "Appli-Behourd",
   "version": "1.0.0",
   "description": "",
-  "main": "partie_1c1.test.js",
+  "main": "test/partie_1c1.test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
