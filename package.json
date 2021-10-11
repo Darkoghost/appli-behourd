@@ -2,7 +2,7 @@
   "name": "Appli-Behourd",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "partie_1c1.test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^9.1.2"
+    "mocha": "^9.1.2",
+    "sinon": "^11.1.2"
   }
 }
