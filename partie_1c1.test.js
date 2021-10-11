@@ -12,5 +12,6 @@ describe('FaireUnePartieEn1c1', function()
         equipe1.collectionjoueur.add(joueur1);
         equipe2.collectionjoueur.add(joueur2);
         let partie = new Partie(equipe1,equipe2);
+        assert.equals(equipe1.collectionjoueur.length(),equipe2.collectionjoueur.length() )
     })
 })
