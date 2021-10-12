@@ -1,10 +1,15 @@
 class Equipe {
     // opportunité : nom d'équipe, Id pour différencier équipe et historique
-    combattant=[];
-    constructor() {
+    combattants;
+
+    constructor(...combattants) {
+        this.combattants = [];
+        this.addCombattantsEquipe(combattants);
 
     }
-    add(combattant){
-        this.combattant.push(combattant);
+    addCombattantsEquipe(combattants){
+        combattants.forEach(function (combattant) {
+            this.combattants.push(combattant);
+        });
     }
 }
