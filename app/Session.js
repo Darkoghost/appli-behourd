@@ -1,3 +1,5 @@
+let Combat = require('../app/Combat.js')
+
 class Session {
     combat;
     combattants;
@@ -6,13 +8,14 @@ class Session {
         this.combattants = [];
     }
 
-    addCombattants(...cbs) {
-        cbs.forEach(function (cb) {
-            this.combattants.push(cb);
-        });
+    addCombattants(cb1, cb2) {
+        this.combattants.push(cb1);
+        this.combattants.push(cb2);
     }
 
     createCombat() {
         this.combat = new Combat();
     }
 }
+
+module.exports = Session;

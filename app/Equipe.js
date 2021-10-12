@@ -13,3 +13,5 @@ class Equipe {
         });
     }
 }
+
+module.exports = Equipe;

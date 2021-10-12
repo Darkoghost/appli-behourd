@@ -1,5 +1,11 @@
 class Combattant {
-    constructor(nom,prenom,poids,adherent,anneeAdhesion) {
+    nom;
+    prenom;
+    poids;
+    anneeAdhesion;
+    adherent;
+
+    constructor(nom, prenom, poids, adherent, anneeAdhesion) {
         this.nom=nom;
         this.prenom=prenom;
         this.poids=poids;
@@ -8,3 +14,5 @@ class Combattant {
     }
 
 }
+
+module.exports = Combattant;

@@ -1,3 +1,5 @@
+let Equipe = require('../app/Equipe.js')
+
 class Combat {
     equipes;
 
@@ -9,10 +11,11 @@ class Combat {
         this.equipes["equipe1"] = new Equipe(combattant1);
         this.equipes["equipe2"] = new Equipe(combattant2);
     }
-    createEquipe(combattants)
-    {
+
+    createEquipe(combattants) {
         this.equipes["equipe1"] = new Equipe();
         this.equipes["equipe2"] = new Equipe();
-
     }
 }
+
+module.exports = Combat;
