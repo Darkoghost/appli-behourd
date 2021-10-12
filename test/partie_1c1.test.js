@@ -1,5 +1,7 @@
 const assert = require('assert')
 var sinon = require('sinon')
+var Session = require('../app/Session.js')
+var Combat = require('../app/Combat.js')
 var Equipe = require('../app/Equipe.js')
 var Combattant = require('../app/Combattant.js')
 
@@ -33,8 +35,8 @@ describe('FaireUnCombatEn1c1', function()
 
         Assert.True(equipes.Length === 2);
         // Assert.True(equipes.All(equipe => equipe.PlayerCount === 1));
-        Assert.deepEqual(combattant1, combattant2);
-        // assert.equals(JSON.stringify(combattant1), JSON.stringify(combattant2));
+        assert.notEqual(combattant1, combattant2);
+        // assert.notEqual(JSON.stringify(combattant1), JSON.stringify(combattant2));
     })
 })
 
