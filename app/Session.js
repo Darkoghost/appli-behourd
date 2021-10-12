@@ -15,8 +15,10 @@ class Session {
         this.combattants.push(cb4);
     }
 
-    createCombat() {
+    createCombat(combattants) {
         this.combat = new Combat();
+        // création des équipes
+        this.combat.createEquipe(combattants);
     }
 }
 

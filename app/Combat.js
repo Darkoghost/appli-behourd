@@ -7,11 +7,6 @@ class Combat {
         this.equipes = [];
     }
 
-    createEquipe1v1(combattant1, combattant2) {
-        this.equipes["equipe1"] = new Equipe(combattant1);
-        this.equipes["equipe2"] = new Equipe(combattant2);
-    }
-
     createEquipe(combattants) {
         let equipe1 = this.equipes["equipe1"] = new Equipe();
         let equipe2 = this.equipes["equipe2"] = new Equipe();
@@ -21,7 +16,7 @@ class Combat {
             if (equipe1.combattants.length > equipe2.combattants.length)
             {
                 equipe2.combattants.push(combattant);
-            }else{
+            } else{
                 equipe1.combattants.push(combattant);
             }
         })

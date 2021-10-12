@@ -16,20 +16,15 @@ describe('FaireUnCombatEn1c1', function()
         // 3- Ajout de tous les combattants dans la session
         session.addCombattants(combattant1, combattant2);
         // 4- Création d'un combat
-        session.createCombat();
-
-        // 5- Création des équipes
+        session.createCombat(session.combattants);
         let combat = session.combat;
-        combat.createEquipe1v1(combattant1, combattant2);
 
         // vérifie qu'il y a bien 2 équipes
-        assert.strictEqual(combat.equipes.length, 2);
-
+        assert.strictEqual(JSON.stringify(combat.equipes).length ,2);
         // vérifie que dans chaque équipe il y a bien 1 combattant
-        // Assert.True(equipes.All(equipe => equipe.PlayerCount === 1));
-
+        assert.notStrictEqual(JSON.stringify(combat.equipes["equipe1"].combattants).length ,1);
+        assert.notStrictEqual(JSON.stringify(combat.equipes["equipe2"].combattants).length ,1);
         // vérifie que les 2 combattants sont différent
-        assert.notDeepStrictEqual(combattant1, combattant2);
-        // assert.notStrictEqual(JSON.stringify(combattant1), JSON.stringify(combattant2));
+        assert.notDeepStrictEqual(combat.equipes["equipe1"].combattants[0], combat.equipes["equipe2"].combattants[0]);
     })
 })

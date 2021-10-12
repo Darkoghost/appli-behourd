@@ -20,25 +20,22 @@ describe('FaireUnCombatEn2c2', function()
         // 3- Ajout de tous les combattants dans la session
         session.addCombattants(combattant1, combattant2, combattant3, combattant4);
         // 4- Création d'un combat
-        session.createCombat();
-
-        // 5- Création des équipes
+        session.createCombat(session.combattants);
         let combat = session.combat;
-        combat.createEquipe(session.combattants);
-
 
         assert.strictEqual(JSON.stringify(combat.equipes).length ,2);
         assert.notStrictEqual(JSON.stringify(combat.equipes["equipe1"].combattants).length ,0);
         assert.notStrictEqual(JSON.stringify(combat.equipes["equipe2"].combattants).length ,0);
-
-        assert.notDeepStrictEqual(combat.equipes["equipe1"].combattants[0], combat.equipes["equipe2"].combattants[0]);
-        // assert.notEqual(JSON.stringify(combattant1), JSON.stringify(combattant2));
     })
 })
 
-
-
-
+// étant donnée une session comportant 3 joueurs quand une partie démarre alors elle comporte 2 équipes, une contenant
+// 2 joueurs et l'autre contenant 1 joueurs
 
 // étant donné une session comportant 4 joueurs voulant faire 2 combats et 3 joueurs voulant rejoindre entre deux combats
 // quand une partie démarre alors elle comporte 2 équipes contenant chacune des joueurs différents
+
+
+
+
+
