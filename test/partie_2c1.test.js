@@ -19,7 +19,7 @@ describe('FaireUnCombatEn2c1', function()
         // 3- Ajout de tous les combattants dans la session
         session.addCombattants2v1(combattant1, combattant2, combattant3);
         // 4- Création d'un combat avec équilibrage des équipes
-        session.createCombat(session.combattants);
+        session.createCombat2v1(session.combattants);
         let combat = session.combat;
         let combattants = session.combattants;
 

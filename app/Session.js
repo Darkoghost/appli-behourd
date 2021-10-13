@@ -15,10 +15,22 @@ class Session {
         this.combattants.push(cb4);
     }
 
+    addCombattants2v1(cb1, cb2, cb3) {
+        this.combattants.push(cb1);
+        this.combattants.push(cb2);
+        this.combattants.push(cb3);
+    }
+
     createCombat(combattants) {
         this.combat = new Combat();
         // création des équipes
         this.combat.createEquipe(combattants);
+    }
+
+    createCombat2v1(combattants) {
+        this.combat = new Combat();
+        // création des équipes
+        this.combat.createEquipeParPoids(combattants);
     }
 }
 
