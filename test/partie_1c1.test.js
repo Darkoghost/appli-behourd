@@ -14,9 +14,9 @@ describe('FaireUnCombatEn1c1', function()
         let combattant2 = new Combattant("MAIGRE","Louis",134,1,2012);
 
         // 3- Ajout de tous les combattants dans la session
-        session.addCombattants(combattant1, combattant2);
+        session.addCombattants1c1(combattant1, combattant2);
         // 4- Création d'un combat
-        session.createCombat(session.combattants);
+        session.createCombatEquilibreParNombre(session.combattants);
         let combat = session.combat;
 
         // vérifie qu'il y a bien 2 équipes

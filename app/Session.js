@@ -8,26 +8,30 @@ class Session {
         this.combattants = [];
     }
 
-    addCombattants(cb1, cb2, cb3, cb4) {
+    addCombattants1c1(cb1, cb2) {
+        this.combattants.push(cb1);
+        this.combattants.push(cb2);
+    }
+    addCombattants2c2(cb1, cb2, cb3, cb4) {
         this.combattants.push(cb1);
         this.combattants.push(cb2);
         this.combattants.push(cb3);
         this.combattants.push(cb4);
     }
 
-    addCombattants2v1(cb1, cb2, cb3) {
+    add3Combattants(cb1, cb2, cb3) {
         this.combattants.push(cb1);
         this.combattants.push(cb2);
         this.combattants.push(cb3);
     }
 
-    createCombat(combattants) {
+    createCombatEquilibreParNombre(combattants) {
         this.combat = new Combat();
         // création des équipes
         this.combat.createEquipe(combattants);
     }
 
-    createCombat2v1(combattants) {
+    createCombatEquilibreParPoid(combattants) {
         this.combat = new Combat();
         // création des équipes
         this.combat.createEquipeParPoids(combattants);

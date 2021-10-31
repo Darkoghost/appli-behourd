@@ -18,9 +18,9 @@ describe('FaireUnCombatEn2c2', function()
         let combattant4 = new Combattant("GRAND","Jacque",70,1,2010);
 
         // 3- Ajout de tous les combattants dans la session
-        session.addCombattants(combattant1, combattant2, combattant3, combattant4);
+        session.addCombattants2c2(combattant1, combattant2, combattant3, combattant4);
         // 4- Création d'un combat
-        session.createCombat(session.combattants);
+        session.createCombatEquilibreParNombre(session.combattants);
         let combat = session.combat;
 
         assert.strictEqual(JSON.stringify(combat.equipes).length ,2);
@@ -29,11 +29,8 @@ describe('FaireUnCombatEn2c2', function()
     })
 })
 
-// étant donnée une session comportant 3 joueurs quand une partie démarre alors elle comporte 2 équipes, une contenant
-// 2 joueurs et l'autre contenant 1 joueurs
 
-// étant donné une session comportant 4 joueurs voulant faire 2 combats et 3 joueurs voulant rejoindre entre deux combats
-// quand une partie démarre alors elle comporte 2 équipes contenant chacune des joueurs différents
+
 
 
 
